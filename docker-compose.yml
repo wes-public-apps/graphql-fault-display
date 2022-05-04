@@ -1,0 +1,12 @@
+services:
+  fault_view:
+    container_name: fault_view
+    hostname: fault_view
+    build: ./fault_view/
+    command: python3 -m app.fault_view
+  
+  fault_server:
+    container_name: fault_server
+    hostname: fault_server
+    build: ./fault_server/
+    command: python3 -m app.fault_server runserver
